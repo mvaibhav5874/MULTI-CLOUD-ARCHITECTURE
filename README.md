@@ -74,6 +74,22 @@
 -  create target group
 -  select the target group there and then create the load balancer
 -  Go to the created load balancer and we have the dns link or the ip assoiated with it copy the ip and paste it in the browser
--  then it should show the output of either the load was going to load balancer 1 or 2 like given below
+-  Then it should show the output of either the load was going to load balancer 1 or 2 like given below
   <img src="output_aws_vm1.png">
   <img src="output_aws_vm2.png">
+
+### Azure region setup :
+**Virtual machine :-**
+- create an virtual machine -> create an resourse group -> give an name to the virtual machine
+- select the region for the virtual machine -> select the avaiblity zone for the vm
+- security type - standard -> select the AMI type and the version of the AMI -> vm architecture of x64
+- size standard -> create an username and an password to the vm
+- inbound rules select the http and the ssh (for windows connection)
+- go to networking and select the virtual networks and also allow the http in inbound rules
+- then review and create -> create the virtual machine
+- create another virtual machine of same configurations and also make shure that the both vm's are in sam vnet
+- Then go to the vm and in the the vm goto the run command script tab and click run
+- Give the vm an run command script to run [script](azure-command.ps1)
+- same way goto the vm2 and change the script and run the script
+**Application load balancer :-**
+- 
