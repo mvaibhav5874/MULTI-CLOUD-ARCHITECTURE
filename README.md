@@ -75,5 +75,5 @@
 -  select the target group there and then create the load balancer
 -  Go to the created load balancer and we have the dns link or the ip assoiated with it copy the ip and paste it in the browser
 -  then it should show the output of either the load was going to load balancer 1 or 2 like given below
-  <img src="output_aws_vm1.png" height="400" wdith="600" >
-  <img src="output_aws_vm2.png" >
+  <img src="output_aws_vm1.png">
+  <img src="output_aws_vm2.png">
