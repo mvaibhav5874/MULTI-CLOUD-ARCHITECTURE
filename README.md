@@ -46,6 +46,7 @@
 
 ## Procedure :
 ### AWS region setup :
+**EC2:-**
 - First go to ec2
 - launch and instance -> give an name to the instance
 - i am taking the amazon linux ami here
@@ -57,4 +58,10 @@
 - enter this script there [userdata](aws_user_data.sh)
 - Launch the instance
 - now launch another instance with the same steps and change the user data ~~hello i am from vm1~~ to Hello i am from vm2
-- 
+- launch this instance 
+**Elastic load balancer:-**
+- Go to load balancing -> load balancers
+- create an load balancer -> Application Load Balancer
+-  Give an name to this load balancer -> internet facing
+-  loadbalancer ip type IPv4
+-  network mapping -> default vc and select all avaliblty zones that you have deployed ec2 in 
