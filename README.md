@@ -92,4 +92,14 @@
 - Give the vm an run command script to run [script](azure-command.ps1)
 - same way goto the vm2 and change the script and run the script
 ### **Application load balancer:-**
-- 
+- search for the load balancer -> create -> create the resouce group -> enter the name for the lb
+- select the region which will same as your vm's
+- add an frontend ip -> name -> IPv4 -> ip address -> create new ip address -> add
+- backend pool -> name the backend pool -> select vn -> NIC -> add and add both the vm's ->save
+- inbound rules -> add an inbound rule -> give the name
+- ipv4 -> select the front ip and the backend pool created -> TCP -> port's -80,80 -> save
+- review and create
+- there would be an ip address given copy the address and paste in the browser
+- you should see which vm the load is going
+  <img src="output_az_1.png">
+  <img src="output_az_2.png">
