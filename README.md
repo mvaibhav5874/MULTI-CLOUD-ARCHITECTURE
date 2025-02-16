@@ -60,8 +60,10 @@
 - go to advance details and then scrool to the user data
 - enter this script there [userdata](aws_user_data.sh)
 - Launch the instance
+  <img src="aws_vm1.png">
 - now launch another instance with the same steps and change the user data ~~hello i am from vm1~~ to Hello i am from vm2
-- launch this instance 
+- launch this instance
+  <img src="aws_vm2.png">
 ### **Elastic load balancer:-**
 - Go to load balancing -> load balancers
 - create an load balancer -> Application Load Balancer
@@ -75,11 +77,13 @@
 -  instances -> name -> IPv4 -> HTTP -> health checks HTTP
 -  select the instances that you want to load balance in **port - 80**
 -  create target group
+   <img src="TG_aws.png">
 -  select the target group there and then create the load balancer
+   <img src="lb_aws.png">
 -  Go to the created load balancer and we have the dns link or the ip assoiated with it copy the ip and paste it in the browser
 -  Then it should show the output of either the load was going to load balancer 1 or 2 like given below
-  <img src="output_aws_vm1.png">
-  <img src="output_aws_vm2.png">
+   <img src="output_aws_vm1.png">
+   <img src="output_aws_vm2.png">
 
 ### Azure region setup :
 ### **Virtual machine :-**
@@ -90,10 +94,12 @@
 - inbound rules select the http and the ssh (for windows connection)
 - go to networking and select the virtual networks and also allow the http in inbound rules
 - then review and create -> create the virtual machine
+  <img src="vm1_azure.png">
 - create another virtual machine of same configurations and also make shure that the both vm's are in sam vnet
 - Then go to the vm and in the the vm goto the run command script tab and click run
 - Give the vm an run command script to run [script](azure-command.ps1)
 - same way goto the vm2 and change the script and run the script
+  <img src="vm2_azure.png">
 ### **Application load balancer:-**
 - search for the load balancer -> create -> create the resouce group -> enter the name for the lb
 - select the region which will same as your vm's
@@ -102,6 +108,7 @@
 - inbound rules -> add an inbound rule -> give the name
 - ipv4 -> select the front ip and the backend pool created -> TCP -> port's -80,80 -> save
 - review and create
+  <img src="lb_azure.png">
 - there would be an ip address given copy the address and paste in the browser
 - you should see which vm the load is going
   <img src="output_az_1.png">
