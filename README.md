@@ -46,7 +46,7 @@
 
 ## Procedure :
 ### AWS region setup :
-**EC2:-**
+### **EC2:-**
 - First go to ec2
 - launch and instance -> give an name to the instance
 - i am taking the amazon linux ami here
@@ -59,7 +59,7 @@
 - Launch the instance
 - now launch another instance with the same steps and change the user data ~~hello i am from vm1~~ to Hello i am from vm2
 - launch this instance 
-**Elastic load balancer:-**
+### **Elastic load balancer:-**
 - Go to load balancing -> load balancers
 - create an load balancer -> Application Load Balancer
 -  Give an name to this load balancer -> internet facing
@@ -79,7 +79,7 @@
   <img src="output_aws_vm2.png">
 
 ### Azure region setup :
-**Virtual machine :-**
+### **Virtual machine :-**
 - create an virtual machine -> create an resourse group -> give an name to the virtual machine
 - select the region for the virtual machine -> select the avaiblity zone for the vm
 - security type - standard -> select the AMI type and the version of the AMI -> vm architecture of x64
@@ -91,5 +91,5 @@
 - Then go to the vm and in the the vm goto the run command script tab and click run
 - Give the vm an run command script to run [script](azure-command.ps1)
 - same way goto the vm2 and change the script and run the script
-**Application load balancer :-**
+### **Application load balancer:-**
 - 
