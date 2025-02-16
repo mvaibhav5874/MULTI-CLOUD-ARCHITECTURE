@@ -26,6 +26,9 @@
                6. Azure Load balancer
                7. Virtual machine
                8. Azure virtual network 
+
+## Architecture :
+  <img src="AWS_multicloud.png">
 ## Description :     
 
 - <ins> ***Amazon Route 53*** </ins> :  That's right! Route 53 is AWS's highly available and scalable DNS web service. In the diagram, it's represented by the icon in the top center, managing traffic flow between the primary and secondary regions.  The "Route 53 Routing Controls" suggest the use of features like traffic policies or health checks to direct traffic.
@@ -118,5 +121,5 @@
 - create record
 
 ## ***output:-***
-- If you go to the domain name you can see the output same as aws load balancer output **hello i am from vm1/2**.Beacuse the primary region for the route 53 to route the aws region so that it will give the traffic to the aws until the aws fail's as we have selected failover the traffic will now locate to the azure .
-- Even for your tests you can stop the ec2's of aws then it takes 5-15 sec's and then the load will be directed to the azure virtual machines you can see the screen shows the **hello from azure vm1/2**
+- When the domain name is accessed, the output that appears at first is the same as that of the AWS load balancer: **Hello, I'm from VM 1/2**. This is due to the fact that Route 53 is set up to give the AWS region priority as the main traffic target.  Until a failure condition is identified, traffic will keep going to AWS. Traffic will be redirected to Azure in the event of an AWS failure because of the defined failover parameters 
+- The AWS EC2 instances can be stopped for testing. Following a 5–15 second failover, traffic will be routed to the Azure virtual computers.  After that, **hello from Azure VM1/2** will appear in the output. This illustrates the mechanism of failover
