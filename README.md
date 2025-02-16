@@ -64,4 +64,16 @@
 - create an load balancer -> Application Load Balancer
 -  Give an name to this load balancer -> internet facing
 -  loadbalancer ip type IPv4
--  network mapping -> default vc and select all avaliblty zones that you have deployed ec2 in 
+-  network mapping -> default vc and select all avaliblty zones that you have deployed ec2
+-  click on create an new security group and then give an name to the security group
+-  inside the inbound rules add an rule that type is **HTTP** and source type is **Anywere IPv4** add the rule
+-  create the security group & add the security group to LB and remove the default security group
+-  listners **create an target group**
+-  instances -> name -> IPv4 -> HTTP -> health checks HTTP
+-  select the instances that you want to load balance in **port - 80**
+-  create target group
+-  select the target group there and then create the load balancer
+-  Go to the created load balancer and we have the dns link or the ip assoiated with it copy the ip and paste it in the browser
+-  then it should show the output of either the load was going to load balancer 1 or 2 like given below
+  <img src="output_aws_vm1.png" height="400" wdith="600" >
+  <img src="output_aws_vm2.png" >
