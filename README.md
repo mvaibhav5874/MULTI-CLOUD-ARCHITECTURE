@@ -103,3 +103,20 @@
 - you should see which vm the load is going
   <img src="output_az_1.png">
   <img src="output_az_2.png">
+
+### **AMAZON Route 53 :-**
+- go to aws and search route53
+- create an hosted zone -> enter your domain name -> public hosted zone create the hosted zone
+- Copy the NS records of route 53 and put the records in your domain records (godaddy for me)
+- manage dns edit name server records -> enter all the name server records
+- create 2 A records which are also host records
+- create a record -> record type -A
+- alias-yes -> alias to application load balancer -> zone that host the load balancer
+- select the failover ->  failover record as primary-> record id = 1
+- add another record -> record type - A -> type the public ip of azure load balancer
+- failover ->  secondary -> record id = 2
+- create record
+
+## ***output:-***
+- If you go to the domain name you can see the output same as aws load balancer output **hello i am from vm1/2**.Beacuse the primary region for the route 53 to route the aws region so that it will give the traffic to the aws until the aws fail's as we have selected failover the traffic will now locate to the azure .
+- Even for your tests you can stop the ec2's of aws then it takes 5-15 sec's and then the load will be directed to the azure virtual machines you can see the screen shows the **hello from azure vm1/2**
